@@ -31,19 +31,23 @@ section.alternate-background {
 }
 
 main img {
-  width: 100%;
+  width: 100px;
 }
 
+section div img{
+  width: 100%;
+}
 /* ---  Groups & Items --- */
 
 .group {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .item {
   flex: 1;
-  margin:10px;
+  margin: 10px;
 }
 
 .item-double {
@@ -54,18 +58,24 @@ main img {
 
 header {
   background-color: #ff385c;
-  padding: 20px 20px 20px 20px;
+  padding: 20px 20px 0 20px;
   text-align: center;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
+
+header nav {
+  overflow: hidden;
+}
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 50px;
+  font-size:13vw;
   color: #fff;
 }
-
 header nav ul {
-  display: flex;
+  display:flex;
   justify-content: center;
 }
 
@@ -79,10 +89,6 @@ header nav ul li a {
   padding: 0 20px 0 0;
 }
 
-header nav ul li:last-child a {
-  margin-right: 20px;
-}
-
 header nav ul li a:hover {
   color: #bdbdbd;
   text-decoration: none;
@@ -90,22 +96,26 @@ header nav ul li a:hover {
 
 /* -------  Search Form ------- */
 form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   border: 2px solid #ff385c;
   padding: 10px;
+  display:flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+form div{
+  display:flex;
+  justify-content: space-between
 }
 
 form label {
   font-weight: bold;
+  margin-left: 10px;
 }
 
 form select,
 form input {
   margin-bottom: 20px;
-  width: 65%;
-  float: right;
+  width: 180px;
 }
 
 form button {
@@ -131,54 +141,61 @@ footer p {
 
 /* -------  Media Query ------- */
 
-@media all and (min-width: 600px) {
+@media all and (min-width:480px){
+
   header {
-    background-color: #ff385c;
-    display: flex;
+    padding-top: 10px;
+    padding-bottom: 5px;
     flex-direction: row;
     justify-content: space-between;
   }
 
-  header nav {
-    padding: 10px;
+  form{
+    flex-direction: row;
+    justify-content:space-between;
+    flex-wrap: wrap;
+  }
+  form div{
+    flex-direction: column;
+    margin-left: 5px;
+  }
+  form div label{
+    text-align: left;
+    margin-right: 140px;
   }
 
-  form {
-    flex-direction: row;
+  form button {
+    width: 250px
   }
 
   .group {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    flex-flow: row nowrap;
-    align-items: center;
+  }
+  
+  .logo{
+    display:flex;
+    font-size: 48px;
   }
 
-  .vacation-form .item {
-    display: flex block;
-    flex: 1 1 auto;
-    flex-direction: column;
-  }
-
-  .item label
-  , .item input 
-  , .item select 
-  , .item button{
-    display: flex;
-    width: 100%
-  }
-
-  .grid-column {
-    display: flex;
+  .item {
     flex: 1;
-    flex-direction: column; 
     margin: 10px;
   }
+  
+  .item-double {
+    flex: 2;
+  }
 
-  .grid-row {
-    display: flex;
-    flex: 1;
-    flex-direction: row;
+  .item img {
+     width: 100% 
+  }
+
+  .about{
+    display:flex;
+    justify-content: center
+  }
+  section div{
+    align-items: center;
   }
 }
