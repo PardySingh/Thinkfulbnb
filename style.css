@@ -159,10 +159,6 @@ footer p {
     display: flex;
 flex-direction: column;
 }
-  form div label{
-    text-align: left;
-    margin-right: 140px;
-  }
 
   form button {
     width: 250px
