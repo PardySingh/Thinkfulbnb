@@ -153,12 +153,12 @@ footer p {
   form{
     flex-direction: row;
     justify-content:space-between;
-    flex-wrap: wrap;
+    display: flex; 
   }
   form div{
-    flex-direction: column;
-    margin-left: 5px;
-  }
+    display: flex;
+flex-direction: column;
+}
   form div label{
     text-align: left;
     margin-right: 140px;
