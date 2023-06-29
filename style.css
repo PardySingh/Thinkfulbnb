@@ -171,7 +171,7 @@ flex-direction: column;
   
   .logo{
     display:flex;
-    font-size: 48px;
+    font-size: 40px;
   }
 
   .item {
